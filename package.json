@@ -1,0 +1,17 @@
+{
+  "name": "underscores",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samhermes/_s.git"
+  },
+  "author": "Sam Hermes",
+  "bugs": {
+    "url": "https://github.com/samhermes/_s/issues"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.0"
+  }
+}
