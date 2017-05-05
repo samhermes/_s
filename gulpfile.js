@@ -1,17 +1,20 @@
 'use strict';
  
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var sourcemaps = require('gulp-sourcemaps');
+var gulp = require('gulp'),
+	sass = require('gulp-sass'),
+	sourcemaps = require('gulp-sourcemaps'),
+	livereload = require('gulp-livereload');
  
 gulp.task('sass', function () {
   return gulp.src('./sass/**/*.scss')
   	.pipe(sourcemaps.init())
     .pipe(sass({outputStyle:'compressed'}).on('error', sass.logError))
     .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest('./'));
+    .pipe(gulp.dest('./'))
+    .pipe(livereload());
 });
  
-gulp.task('sass:watch', function () {
+gulp.task('watch', function () {
+	livereload.listen();
   gulp.watch('./sass/**/*.scss', ['sass']);
 });
