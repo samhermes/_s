@@ -1,19 +1,5 @@
-.sticky {
-	display: block;
-}
-
 .hentry {
 	margin: 0 0 1.5em;
-}
-
-.byline,
-.updated:not(.published){
-	display: none;
-}
-
-.single .byline,
-.group-blog .byline {
-	display: inline;
 }
 
 .page-content,
@@ -25,4 +11,13 @@
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
+}
+
+.widget {
+	margin: 0 0 1.5em;
+
+	/* Make sure select elements fit in widgets. */
+	select {
+		max-width: 100%;
+	}
 }
