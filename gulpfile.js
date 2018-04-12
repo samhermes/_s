@@ -1,14 +1,19 @@
 'use strict';
  
 var gulp = require('gulp'),
-	sass = require('gulp-sass'),
-	sourcemaps = require('gulp-sourcemaps'),
-	livereload = require('gulp-livereload');
+  sass = require('gulp-sass'),
+  sourcemaps = require('gulp-sourcemaps'),
+  autoprefixer = require('gulp-autoprefixer'),
+  livereload = require('gulp-livereload');
  
 gulp.task('sass', function () {
   return gulp.src('./sass/**/*.scss')
-  	.pipe(sourcemaps.init())
+    .pipe(sourcemaps.init())
     .pipe(sass({outputStyle:'compressed'}).on('error', sass.logError))
+    .pipe(autoprefixer({
+      browsers: ['last 2 versions'],
+      cascade: false
+    }))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('./'))
     .pipe(livereload());
