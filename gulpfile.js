@@ -11,7 +11,7 @@ gulp.task('sass', function () {
     .pipe(sourcemaps.init())
     .pipe(sass({outputStyle:'compressed'}).on('error', sass.logError))
     .pipe(autoprefixer({
-      browsers: ['last 2 versions'],
+      browsers: ['>0.25%'],
       cascade: false
     }))
     .pipe(sourcemaps.write('./'))
