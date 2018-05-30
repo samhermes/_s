@@ -24,7 +24,7 @@
 
 			<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', '_s' ); ?></p>
 			<?php
-				get_search_form();
+			get_search_form();
 
 		else : ?>
 
@@ -32,6 +32,7 @@
 			<?php
 				get_search_form();
 
-		endif; ?>
+		endif;
+		?>
 	</div><!-- .page-content -->
 </section><!-- .no-results -->
